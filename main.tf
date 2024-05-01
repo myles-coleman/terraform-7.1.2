@@ -1,11 +1,10 @@
 terraform {
 
-
   backend "azurerm" {
     resource_group_name  = "RG-mcoleman-bootcamp"
     storage_account_name = "mylesstorage"
     container_name       = "tfstate-myles"
-    key                  = "prod.terraform.tfstate"        # Can be passed via `-backend-config=`"key=<blob key name>"` in the `init` command.
+    key                  = "prod.terraform.tfstate" # Can be passed via `-backend-config=`"key=<blob key name>"` in the `init` command.
     use_oidc             = true
   }
 
